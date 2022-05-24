@@ -1,0 +1,575 @@
+// @font-face {
+//     font-family: 'Swedbank';
+//     src: url(/src/components/fonts/SwedbankHeadline-Black.ttf);
+// }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // font-family: 'Swedbank';
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgb(230, 230, 230);
+    padding: 30px 40px;
+    width: fit-content;
+}
+
+.question--main {
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.error {
+    color: red;
+}
+
+.question {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.button--box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.button--box-begining {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.button--width {
+    max-width: 100px;
+}
+
+.summary--box {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summary--span {
+    display: flex;
+    border-bottom: 2px solid gold;
+    width: 100%;
+    max-width: 520px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.select {
+    background-clip: padding-box;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px 1px 2px;
+    border-style: solid;
+    border-color: rgb(212, 196, 188) rgb(212, 196, 188) rgb(114, 96, 94);
+    border-image: initial;
+    border-radius: 2px 2px 0px 0px;
+    box-shadow: none;
+    height: 3rem;
+    padding: 0px 0.75rem;
+    min-width: 352px;
+    color: rgb(81, 43, 43);
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 100%;
+    appearance: none;
+}
+
+.textarea {
+    background-clip: padding-box;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px 1px 2px;
+    border-style: solid;
+    border-color: rgb(212, 196, 188) rgb(212, 196, 188) rgb(114, 96, 94);
+    border-radius: 2px 2px 0px 0px;
+    min-height: 9rem;
+    padding: 0px 0.75rem;
+    min-width: 29rem;
+    color: rgb(81, 43, 43);
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 100%;
+    appearance: none;
+    resize: none;
+}
+
+input {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+input {
+    overflow: visible;
+}
+
+[type=checkbox] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.d-block {
+    display: block !important;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body.intent-mouse :focus {
+    outline: 0;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.checkbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+}
+
+.checkbox:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.checkbox label {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 0 0 1.75rem;
+    min-height: 1.5rem;
+    padding-left: .2rem;
+    position: relative;
+}
+
+.checkbox input[type=checkbox] {
+    margin-right: 1rem;
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox input[type=checkbox]+label:after {
+    background-color: #fff;
+    border: 2px solid #a38b80;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: 1.375rem;
+    left: -28px;
+    position: absolute;
+    top: 1px;
+    visibility: visible;
+    width: 1.375rem;
+}
+
+.checkbox input[type=checkbox]+label:before {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 1.375rem;
+    left: -28px;
+    position: absolute;
+    top: 1px;
+    visibility: visible;
+    width: 1.375rem;
+}
+
+.checkbox input[type=checkbox]:checked+label:after {
+    background-color: #512b2b;
+    background-image: url(https://design.swedbankpay.com/v/9.1.0/designguide/assets/check-mark.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-color: #512b2b;
+}
+
+.checkbox input[type=checkbox]:focus+label:before {
+    border-color: #512b2b;
+    -webkit-box-shadow: 0 0 0 .5rem #d4c4bc;
+    box-shadow: 0 0 0 .5rem #d4c4bc;
+}
+
+.checkbox input[type=checkbox]:focus+label:after {
+    border-color: #512b2b;
+}
+
+.checkbox input[type=checkbox]:hover+label:before {
+    -webkit-box-shadow: 0 0 0 .5rem #d4c4bc;
+    box-shadow: 0 0 0 .5rem #d4c4bc;
+    top: 1px;
+}
+
+.checkbox input[type=checkbox]:hover+label:after {
+    border-color: #512b2b;
+}
+
+label {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: .25rem;
+    max-width: 100%;
+}
+
+.checkbox label {
+    cursor: pointer;
+    text-transform: none;
+}
+
+input[type=checkbox]:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button {
+    overflow: visible;
+}
+
+button {
+    text-transform: none;
+}
+
+[type=button],
+button {
+    -webkit-appearance: button;
+}
+
+[type=button]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+[type=button]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body.intent-mouse :focus {
+    outline: 0;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.btn {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-family: Swedbank Headline, Arial, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    height: 3rem;
+    line-height: 1rem;
+    line-height: 1.5;
+    padding: 0 1rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.btn:last-child {
+    margin-right: 0;
+}
+
+.btn:active:focus,
+.btn:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.btn:focus,
+.btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:active {
+    background-image: none;
+    outline: 0;
+}
+
+.btn.btn-primary {
+    background-color: #fdc129;
+    color: #512b2b;
+}
+
+.btn.btn-primary:focus {
+    -webkit-box-shadow: 0 0 0 .1rem #512b2b;
+    box-shadow: 0 0 0 .1rem #512b2b;
+    outline: 0;
+}
+
+.btn.btn-primary:hover {
+    background-color: #ffdf88;
+    color: #512b2b;
+}
+
+.btn.btn-primary:active {
+    background-color: #fdc129;
+    border: 1px solid #fede8e;
+    -webkit-box-shadow: inset 0 0 0 2px #fede8e;
+    box-shadow: inset 0 0 0 2px #fede8e;
+    color: #512b2b;
+}
+
+.btn.btn-block {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/*! CSS Used fontfaces */
+@font-face {
+    font-family: Swedbank Headline;
+    src: url(https://design.swedbankpay.com/v/9.1.0/designguide/fonts/SwedbankHeadline-Bold.woff) format("woff");
+}
+
+input {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+input {
+    overflow: visible;
+}
+
+[type=radio] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body.intent-mouse :focus {
+    outline: 0;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+label {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: .25rem;
+    max-width: 100%;
+}
+
+fieldset:disabled .radio input[type=radio]+label:before {
+    background-color: #fff;
+    border-color: #d4c4bc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+fieldset:disabled .radio input[type=radio]+label,
+fieldset:disabled .radio input[type=radio]+label:before,
+fieldset:disabled .radio input[type=radio]:checked+label:before {
+    cursor: not-allowed;
+}
+
+.radio label {
+    cursor: pointer;
+    text-transform: none;
+}
+
+.radio {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.radio:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.radio label {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 0 0 1rem;
+    min-height: 1.5rem;
+    padding-left: .2rem;
+    position: relative;
+}
+
+.radio input[type=radio] {
+    opacity: 0;
+}
+
+.radio input[type=radio]+label:before {
+    background-color: #fff;
+    border: 2px solid #a38b80;
+    border-radius: 50%;
+    content: "";
+    cursor: pointer;
+    height: 1.375rem;
+    left: -28px;
+    position: absolute;
+    visibility: visible;
+    width: 1.375rem;
+}
+
+.radio input[type=radio]:checked+label:before {
+    background-color: #fff;
+    background-image: url(https://design.swedbankpay.com/v/9.1.0/designguide/assets/circle.svg);
+    background-repeat: no-repeat;
+    border-color: #512b2b;
+}
+
+.radio input[type=radio]:focus+label:before,
+.radio input[type=radio]:hover+label:before {
+    border-color: #512b2b;
+    -webkit-box-shadow: 0 0 0 .375rem #d4c4bc;
+    box-shadow: 0 0 0 .375rem #d4c4bc;
+}
+
+input[type=radio]:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.input--box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+}
+
+.input--help {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.input--help-modified {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+.border--red {
+    border: 2px solid red;
+}
